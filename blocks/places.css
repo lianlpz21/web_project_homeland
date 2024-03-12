@@ -1,8 +1,10 @@
 .places {
   padding-top: 62px;
+  padding-bottom: 64px;
 }
 
 .place {
+  margin-bottom: 16px;
 }
 
 .place__title {
@@ -83,15 +85,15 @@
   .place {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 340px auto;
     max-width: 720px;
-    margin: auto;
-    column-gap: 28px;
 
-    grid-template-rows: auto 340px 0;
+    margin: 0 auto 46px;
+    column-gap: 28px;
   }
 
   .place__title {
-    margin: 0 0 46px;
+    margin: 0 0 48px;
     min-width: 340px;
 
     font-size: 42px;
@@ -101,6 +103,7 @@
   .place__website {
     margin: 0 0 24px;
     min-width: 295px;
+    align-self: flex-end;
   }
 
   .place__url-heading {
@@ -116,6 +119,16 @@
     max-height: 340px;
   }
 
+  .place__paragraphs {
+    max-width: 352px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 1;
+  }
+
   .place__paragraph {
     margin: 0;
   }
@@ -125,25 +138,57 @@
     grid-row: 3 / 4;
     width: 355px;
     max-width: 100%;
-  }
 
-  .place__paragraphs {
-    max-width: 352px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    margin: 48px 0 0;
+    align-self: flex-start;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .place {
+  .places {
     padding-top: 92px;
+    max-width: 987px;
+    margin: auto;
+  }
+
+  .place {
     max-width: 984px;
+    grid-template-rows: auto 460px auto;
+    margin-bottom: 80px;
+  }
+
+  .place:last-child {
+    margin-bottom: 0;
+  }
+
+  .place__title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 76px;
+
+    max-width: 460px;
+  }
+
+  .place__website {
+    max-width: 456px;
+    margin-bottom: 48px;
+  }
+
+  .place__url-heading {
+    max-width: 58px;
+  }
+
+  .place__artist {
+    max-width: 456px;
   }
 
   .place__image {
-    min-width: 460px;
-    min-height: 460px;
+    max-width: 460px;
+    max-height: 460px;
+  }
+
+  .place__paragraphs {
+    font-size: 18px;
+    line-height: 29px;
   }
 }
