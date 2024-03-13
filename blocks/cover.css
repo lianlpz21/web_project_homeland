@@ -1,88 +1,86 @@
 .cover {
-  background-image: url("../images/__item-1.jpg");
+  background-image: url("../images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 254px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+  width: 100%;
+  position: relative;
 }
-.cover:hover {
-  opacity: 70%;
+
+.cover__overlay {
+  position: absolute;
+  min-height: 254px;
+  height: 100%;
+  width: 100%;
+}
+
+.cover__overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .cover__content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 254px;
   max-width: 288px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .cover__title {
+  margin: 0;
   font-size: 32px;
   font-weight: 900;
   line-height: 35px;
+  letter-spacing: 0em;
   text-align: center;
-  margin: 0;
 }
 
 .cover__subtitle {
+  margin: 16px 0;
+  max-width: 280px;
+  text-align: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  text-align: center;
-
-  margin: 16px 0;
 }
 
 .cover__btn {
+  background-color: #0278fe;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  background-color: #0278fe;
-  color: #fff;
-
-  width: 100%;
   padding: 13px 20px;
+  width: 280px;
+  border-radius: 4px;
 }
 
 .cover__btn:hover {
-  opacity: 80%;
   cursor: pointer;
-}
-
-@media screen and (min-width: 550px) {
-  .cover {
-    background-image: url("../images/__background.jpg");
-  }
+  background-color: #0063d2;
 }
 
 @media screen and (min-width: 768px) {
-  .cover {
-    height: 746px;
-  }
-
   .cover__content-container {
     max-width: 656px;
+    height: 746px;
   }
   .cover__title {
     font-size: 72px;
     font-weight: 900;
     line-height: 76px;
   }
-
   .cover__subtitle {
+    margin: 32px 0;
     font-size: 18px;
+    font-weight: 400;
     line-height: 22px;
-    max-width: 280px;
-    margin: 32px auto;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .cover {
-    max-width: 1184px;
-    margin: auto;
-    background-image: url("../images/__background-big.jpg");
   }
 }

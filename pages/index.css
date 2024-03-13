@@ -1,8 +1,4 @@
-/* @font-face {
-  font-family: "Inter";
-  src: url(../vendor/fonts/Inter-Black.ttf) format("woff2");
-  src: url(../vendor/fonts/Inter-Black.ttf) format("woff");
-} */
+@import url(../vendor/fonts/fonts.css);
 @import url(../vendor/normalize.css);
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
