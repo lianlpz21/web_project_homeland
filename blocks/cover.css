@@ -10,6 +10,9 @@
   align-items: center;
   gap: 16px;
 }
+.cover:hover {
+  opacity: 70%;
+}
 
 .cover__content-container {
   max-width: 288px;
@@ -41,6 +44,11 @@
 
   width: 100%;
   padding: 13px 20px;
+}
+
+.cover__btn:hover {
+  opacity: 80%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 550px) {

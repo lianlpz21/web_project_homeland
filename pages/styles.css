@@ -1,4 +1,8 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+/* @font-face {
+  font-family: "Inter";
+  src: url(../vendor/fonts/Inter-Black.ttf) format("woff2");
+  src: url(../vendor/fonts/Inter-Black.ttf) format("woff");
+} */
 @import url(../vendor/normalize.css);
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
